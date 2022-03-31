@@ -1,5 +1,6 @@
 import './styles.css';
 
+import GUI from 'lil-gui';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
@@ -12,6 +13,8 @@ const sizes = {
   width: window.innerWidth,
   height: window.innerHeight,
 };
+
+const gui = new GUI();
 
 const scene = new THREE.Scene();
 
