@@ -19,7 +19,10 @@ const gui = new GUI();
 const scene = new THREE.Scene();
 
 const geometry = new THREE.PlaneBufferGeometry();
-const material = new THREE.RawShaderMaterial();
+const material = new THREE.RawShaderMaterial({
+  vertexShader: ``,
+  fragmentShader: ``,
+});
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
