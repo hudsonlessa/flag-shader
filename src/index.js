@@ -18,10 +18,10 @@ const gui = new GUI();
 
 const scene = new THREE.Scene();
 
-const defaultCubeGeometry = new THREE.BoxBufferGeometry(1, 1, 1);
-const defaultCubeMaterial = new THREE.MeshBasicMaterial({ color: '#999' });
-const defaultCube = new THREE.Mesh(defaultCubeGeometry, defaultCubeMaterial);
-scene.add(defaultCube);
+const geometry = new THREE.PlaneBufferGeometry();
+const material = new THREE.RawShaderMaterial();
+const mesh = new THREE.Mesh(geometry, material);
+scene.add(mesh);
 
 const camera = new THREE.PerspectiveCamera(
   75,
@@ -30,7 +30,7 @@ const camera = new THREE.PerspectiveCamera(
   100
 );
 camera.position.set(3, 3, -3);
-camera.lookAt(defaultCube.position);
+camera.lookAt(mesh.position);
 scene.add(camera);
 
 const renderer = new THREE.WebGLRenderer({
