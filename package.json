@@ -1,8 +1,8 @@
 {
-  "name": "threejs-boilerplate",
+  "name": "",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/hudsonlessa/threejs-boilerplate.git",
+  "repository": "",
   "author": "Hudson Lessa",
   "license": "MIT",
   "scripts": {
