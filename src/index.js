@@ -4,6 +4,9 @@ import GUI from 'lil-gui';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
+import fragmentShader from './shaders/test/fragment.frag';
+import vertexShader from './shaders/test/vertex.vert';
+
 const { body } = document;
 const canvas = document.createElement('canvas');
 canvas.classList.add('webgl');
@@ -20,8 +23,8 @@ const scene = new THREE.Scene();
 
 const geometry = new THREE.PlaneBufferGeometry(1, 1, 32, 32);
 const material = new THREE.RawShaderMaterial({
-  vertexShader: ``,
-  fragmentShader: ``,
+  vertexShader,
+  fragmentShader,
 });
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
