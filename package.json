@@ -1,8 +1,8 @@
 {
-  "name": "",
+  "name": "flag-shader",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "",
+  "repository": "https://github.com/hudsonlessa/flag-shader.git",
   "author": "Hudson Lessa",
   "license": "MIT",
   "scripts": {
