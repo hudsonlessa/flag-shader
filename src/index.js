@@ -36,6 +36,7 @@ const material = new THREE.RawShaderMaterial({
     uTexture: {
       value: flagTexture,
     },
+    uFrequency: { value: new THREE.Vector2(10, 5) },
   },
 });
 
