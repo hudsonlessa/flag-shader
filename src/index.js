@@ -21,10 +21,22 @@ const gui = new GUI();
 
 const scene = new THREE.Scene();
 
+const textureLoader = new THREE.TextureLoader();
+
 const geometry = new THREE.PlaneBufferGeometry(1, 1, 32, 32);
+
+const flagTexture = textureLoader.load('./assets/textures/flags/estonia.png');
+flagTexture.encoding = THREE.sRGBEncoding;
+flagTexture.minFilter = THREE.NearestFilter;
+
 const material = new THREE.RawShaderMaterial({
   vertexShader,
   fragmentShader,
+  uniforms: {
+    uTexture: {
+      value: flagTexture,
+    },
+  },
 });
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
