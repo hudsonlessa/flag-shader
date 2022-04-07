@@ -37,6 +37,7 @@ const material = new THREE.RawShaderMaterial({
       value: flagTexture,
     },
     uFrequency: { value: new THREE.Vector2(10, 5) },
+    uTime: { value: 0 },
   },
 });
 
@@ -98,7 +99,13 @@ window.addEventListener('resize', () => {
   updateRendererSizeAndPixelRatio();
 });
 
+const clock = new THREE.Clock();
+
 const tick = () => {
+  const elapsedTime = clock.getElapsedTime();
+
+  material.uniforms.uTime.value = elapsedTime;
+
   renderer.render(scene, camera);
 
   requestAnimationFrame(tick);
